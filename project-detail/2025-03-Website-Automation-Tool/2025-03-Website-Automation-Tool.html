@@ -5,6 +5,7 @@
     <title>2025-03-Website-Automation-Tool</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="/MY-PROFILE/project-detail/2025-03-Website-Automation-Tool/style.css">
+
 </head>
 
 <body>
@@ -15,61 +16,96 @@
 </header>
 
 <section>
-    <h2>Giới thiệu dự án</h2>
-    <p><strong>Website Automation Tool</strong> Phát triển hệ thống tự động hoá tạo nội dung cho mạng xã hội, thu thập dữ liệu video từ YouTube, xử lý nội dung bằng AI và xuất kết quả sang Google Sheets. Hệ thống hỗ trợ tải lên và lưu trữ phương tiện qua FTP, đảm bảo chất lượng ảnh gốc.</p>
+    <h2>Mục tiêu dự án</h2>
+    <p>
+        Tạo nội dung và hình ảnh để kinh doanh
+    </p>
 
     <h3>Chức năng chính:</h3>
-    <div>
     <pre>
-        Tóm tắt nội dung youtube
-        Chatbot
-        OCR
-        backup media
-        tải video tiktok, youtube
+        <strong>Website Automation Tool:</strong> Phát triển hệ thống tự động hoá tạo nội dung cho mạng xã hội
+        <strong>Backup Media:</strong> Lưu trữ media lên google photo, hoặc các nền tảng khác
+        <strong>OCR:</strong> Ảnh -> Chữ
+        <strong>Chatbot:</strong> Sử dụng DeepSeek-R1-Distill-Qwen-7B và hiệu năng của máy để gen ra câu trả lời
+        <strong>Learn English:</strong> Phương pháp luyện nghe - đánh máy | Một số nền tảng sử dụng phương pháp này (Elsa Speak, LingQ, Listen and Write, EnglishCentral)
+        <strong>Download Video:</strong> Tải video tiktok, youtube
     </pre>
-    </div>
 
     <h3>Công nghệ sử dụng:</h3>
-
     <pre>
-        <strong>Backend:</strong> Spring Boot, Spring Security, JWT, Spring Data JPA
+        <strong>Backend:</strong> Spring Boot
         <strong>Frontend:</strong> React TypeScript
-        <strong>API Docs:</strong> Swagger
-        <strong>Các công cụ tích hợp:</strong> LM Studio, n8n, FTP, YouTube API, Google Sheets API
     </pre>
 </section>
 
 </body>
 
-<h1>DEMO CHATBOT</h1>
-<p>
+<h1 style="text-align: center">
+    DEMO CHATBOT
+</h1>
+<p style="text-align: center">
     Sử dụng model DeepSeek-R1-Distill-Qwen-7B và hiệu năng của máy để gen ra câu trả lời, tuy nhiên khi sử dụng tiếng việt model và cấu hình máy này cho ra kết quả không tốt, nhưng đổi lại được sự bảo mật thông tin.
 </p>
-<p>
+<p style="text-align: center">
     Đề xuất chuyển qua API của các nền tảng chat AI giúp tăng tốc và đỡ hại máy
 </p>
-<video controls>
-    <source src="chatbot.mp4">
-</video>
 
-<h1>DEMO BACKUP</h1>
-<p>
+<div style="display: flex; justify-content: center;">
+    <video controls controlsList="nodownload" width="1080">
+        <source src="chatbot.mp4" type="video/mp4">
+    </video>
+</div>
+
+<h1 style="text-align: center">
+    DEMO BACKUP
+</h1>
+<p style="text-align: center">
     Upload ảnh lên google photo
 </p>
-<p>
+<p style="text-align: center">
     Đã không tốn dung lượng trong máy rồi, Mà còn lên google photo lượng gốc mà không tăng dung lượng 15gb bộ nhớ miễn phí mới hay
 </p>
-<video controls>
-    <source src="backup_media.mp4">
-</video>
 
-<!--<h1>DEMO GIAO DỊCH</h1>-->
-<!--<video controls>-->
-<!--    <source src="giaodich.mkv">-->
-<!--</video>-->
+<div style="display: flex; justify-content: center;">
+    <video controls controlsList="nodownload" width="1080">
+        <source src="backup_media.mp4" type="video/mp4">
+    </video>
+</div>
 
-<!--<h1>DEMO KẾ TOÁN</h1>-->
-<!--<video controls>-->
-<!--    <source src="ketoan.mkv">-->
-<!--</video>-->
+<p style="text-align: center">
+    Nâng cấp giao diện
+</p>
+<div style="display: flex; justify-content: center;">
+    <video controls controlsList="nodownload" width="1080">
+        <source src="backup_media1.mp4" type="video/mp4">
+    </video>
+</div>
+
+<h1 style="text-align: center">
+    DEMO TÓM TẮT YOUTUBE
+</h1>
+<p style="text-align: center">
+    Tóm tắt nội dung 2 tiếng
+</p>
+
+<div style="display: flex; justify-content: center;">
+    <video controls controlsList="nodownload" width="1080">
+        <source src="tóm tắt.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div class="markdown-body" id="content">
+    <!-- Markdown content will be injected here -->
+</div>
+
+<script>
+    fetch('noidung_tomtat.md')
+        .then(response => response.text())
+        .then(text => {
+            document.getElementById('content').innerHTML = marked.parse(text);
+        });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
 </html>
