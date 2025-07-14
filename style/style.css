@@ -237,9 +237,16 @@ body.music-playing .list-group-item a {
     object-fit: cover;  /* Đảm bảo hình ảnh không bị méo */
     border: 5px solid transparent; /* Thêm viền để áp dụng hiệu ứng nhấp nháy màu */
 }
+
+/*.rotating-blinking-avatar {*/
+/*    animation: rotate 3s linear infinite, colorchange 0.4s linear infinite ,blinkColor 1s linear infinite;*/
+/*}*/
+
+/* toc do xoay */
 .rotating-blinking-avatar {
-    animation: rotate 3s linear infinite, colorchange 0.4s linear infinite ,blinkColor 1s linear infinite;
+    animation: rotate 10s linear infinite, colorchange 10s linear infinite ,blinkColor 10s linear infinite;
 }
+
 
 @keyframes rotate {
     from {
